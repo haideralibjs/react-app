@@ -10,13 +10,16 @@ on:
 jobs:
   build:                      
     runs-on: [self-hosted]
+    environment: staging
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Print Environment
+        run: echo ${{ secrets.Env_Name }}
 
   test:                     
     runs-on: [self-hosted]
-    needs: build              
+    needs: build
     steps:
       - name: Npm Install 
         run: npm ci
