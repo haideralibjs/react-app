@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Print Environment
+      - name: Print Environment Variables
         run: echo "ENV_NAME = $ENV:ENV_NAME"
 
   test:                     
