@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Print Environment
-        run: echo ${{ env.ENV_NAME }}
+        run: echo $ENV_NAME
 
   test:                     
     runs-on: [self-hosted]
