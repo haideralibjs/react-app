@@ -13,10 +13,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Nodejs installation
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
 
   test:                     
     runs-on: [self-hosted]
